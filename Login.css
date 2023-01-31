@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nan {
+    display: none;
+}
+
+nav {
+    background-color: #0d0a38;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color:white;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.links ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+.links ul li a {
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    border-radius: 10px;
+}
+
+.links ul li a:hover {
+    color: #0d0a38;
+    background: white;
+}
+
+nav label {
+    display: none;
+}
+
+.navbar {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Main part */
+
+
+main {
+    background: #dbdcf3;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    width: 20rem;
+    background-color: white;
+    z-index: 3;
+    padding: 25% 5% 30%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+
+.form h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #0d0a38;
+    margin-bottom: 15px;
+}
+
+.form p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+    color: #0d0a38;
+}
+
+label {
+    color:black;
+}
+
+.form label {
+    font-weight: bold;
+}
+
+.form input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color:black;
+}
+
+.form input:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.form .rem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.rem p {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #0d0a38;
+}
+
+button {
+    width: 30%;
+    padding: 8px 5px;
+    font-weight: 600;
+    color: white;
+    background-color: #0d0a38;
+    border: none;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #14ed09;
+}
+
+/* Responsiveness */
+
+
+@media screen and (max-width:600px) {
+
+    nav {
+        padding: 20px 5%;
+    }
+
+    .links ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        position: absolute;
+        background-color: #0d0a38;
+        right: 0;
+        top: -1000px;
+        padding: 10vh 0vh 10vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .links ul li {
+        width: 80%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+
+    .links ul li:hover {
+        background-color: white;
+        color: #0d0a38;
+        cursor: pointer;
+    } 
+
+    .links ul li a:hover {
+        color: #0d0a38;
+    }
+
+    nav :checked ~ .links ul {
+        top: 09vh;
+    }
+
+    nav label {
+        display: block;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    
+    .content h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .content p {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .footer-sec {
+        flex-direction: column;
+    }
+    .footer-sec div {
+        margin-top: 20px;
+    }
+}
